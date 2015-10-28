@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HealthTracker</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <h1><%= link_to "Health Tracker", root_path %></h1>
+    <hr>
+
+    <hr>
+  </nav>
+
+<%= yield %>
+
+</body>
+</html>
