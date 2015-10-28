@@ -9,6 +9,7 @@ class FoodsController < ApplicationController
     @food = @user.foods.new(food_params)
 
     @food.save
+    @calories_total = @user.calories_total
     respond_to do |format|
       format.html {redirect_to root_path}
       format.js

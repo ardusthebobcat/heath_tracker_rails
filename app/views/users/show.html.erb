@@ -9,10 +9,10 @@ Now Showing: <br> <hr>
     <% if @user.foods.any? %>
       <% @user.foods.each do |food| %>
         <li>
-          <%= link_to '[x]', user_food_path(@user, food),  method: 'delete' %> <%= food.name %> (<%= food.calories %>)
+          <%= link_to '[x]', user_food_path(@user, food),  method: 'delete' %> <%= food.name %> (<%= food.calories %> calories)
         </li>
       <% end %>
     <% end %>
   </ul>
-
+  Total Calories: <div id="calorie_count"><%= @user.calories_total %></div>
   <%= link_to "Add Food", new_user_food_path(@user), id:'add_food_link', remote: true %>

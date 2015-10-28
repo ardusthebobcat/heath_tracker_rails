@@ -10,7 +10,9 @@
   <nav>
     <h1><%= link_to "Health Tracker", root_path %></h1>
     <hr>
-
+      <%= User.find(session[:user_id]).username %>
+      <%= link_to 'Sign Up', login_path %>
+      <%= link_to 'Sign Out', logout_path, method: 'get' %>
     <hr>
   </nav>
 

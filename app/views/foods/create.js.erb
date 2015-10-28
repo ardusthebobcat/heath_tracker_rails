@@ -1,3 +1,4 @@
 $('#new_food').remove();
 $('#add_food_link').show();
 $('#food_list').append('<li><%= j render "foodtile", locals:{ :@food => params[:food]} %></li>');
+$('#calorie_count').html('<%=  @calories_total %>');
